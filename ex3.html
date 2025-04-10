@@ -10,12 +10,22 @@
       height: 200px;
       border-radius: 50%;
       background-image: conic-gradient(
-        red 0deg 90deg,
-        green 90deg 180deg,
-        blue 180deg 270deg,
-        yellow 270deg 360deg);
+        red 0deg ,red 90deg,
+        green 90deg ,green 180deg,
+        blue 180deg ,blue 270deg,
+        yellow 270deg);
+        animation: rotate 5s linear infinite;
     }
-    
+    @keyframes rotate {
+      0% 
+      { 
+        transform: rotate(0deg); 
+    }
+      100% 
+      { 
+        transform: rotate(360deg); 
+       }
+    }
   </style>
 </head>
 <body>
