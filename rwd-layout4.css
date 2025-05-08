@@ -1,0 +1,144 @@
+.headline{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.list{
+  background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+.item{
+    background-color: pink;
+    flex: none;
+    width: 280px;
+    margin: 10px;
+}
+.desktop-menu {
+  display: block;
+  text-align: center;
+}
+.mobil-menu{
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width:1250px){
+    .headline{
+        font-size: 30px;
+    }
+    .list{
+        flex-wrap: wrap;
+    }
+    .item{
+        width: 45%;
+    }
+    .desktop-menu{
+        text-align: center;
+        display: block;
+    }
+    .mobil-menu{
+        text-align: center;
+        display: none;
+    }
+}
+@media screen and (max-width:500px) {
+    .headline{
+        font-size: 20px;
+    }
+    .list{
+      flex-wrap: wrap;
+  }
+    .item{
+        width: 90%;
+    }
+    .desktop-menu{
+        text-align: center;
+        display: none;
+    }
+    .mobil-menu{
+        text-align: center;
+        display: block;
+    }
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 9fr;
+  gap:10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+/*body {
+    margin: 30px;
+  }
+  .hamburger {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: #666;
+    cursor: pointer;
+  }
+  .hamburger::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    box-shadow: #fff 0 6px 0 0, #fff 0 -6px 0 0;
+  }
+  /* 以下為 hover 動畫效果 */
+  /*.hamburger::before,
+  .hamburger::after {
+    transition: 0.2s linear;
+  }
+  .hamburger::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  .hamburger:hover::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: none;
+  }
+  .hamburger:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .desktop-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 150px;
+    z-index: 999;
+    text-align: center;
+  }
+
+  .desktop-menu.show {
+    display: block;
+  }
+
+  .desktop-menu a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .desktop-menu a:last-child {
+    border-bottom: none;
+  }*/

@@ -1,0 +1,41 @@
+.item{
+    background-color: pink;
+    flex: none;
+    width: 280px;
+    margin: 10px;
+}
+@media only screen and(max-width:1250px){
+    .headline{
+        font-size: 30px;
+    }
+    .list{
+        flex-wrap: wrap;
+    }
+    .item{
+        width: 45%;
+    }
+    .desktop-menu{
+        text-align: center;
+        display: block;
+    }
+    .mobil-menu{
+        text-align: center;
+        display: none;
+    }
+}
+@media screen and(max-width:500px) {
+    .headline{
+        font-size: 20px;
+    }
+    .item{
+        width: 90%;
+    }
+    .desktop-menu{
+        text-align: center;
+        display: none;
+    }
+    .mobil-menu{
+        text-align: center;
+        display: block;
+    }
+}
