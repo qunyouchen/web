@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+        
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+        
+        // 提示使用者選擇轉換方向
+        var choice = prompt("請選擇轉換方式：\n1. 攝氏轉華氏\n2. 華氏轉攝氏");
+        
+        if (choice === "1") {
+            var c = parseFloat(prompt("請輸入攝氏溫度："));
+            var f = celsiusToFahrenheit(c);
+            alert(c + "°C = " + f.toFixed(2) + "°F");
+        } else if (choice === "2") {
+            var f = parseFloat(prompt("請輸入華氏溫度："));
+            var c = fahrenheitToCelsius(f);
+            alert(f + "°F = " + c.toFixed(2) + "°C");
+        } else {
+            alert("請輸入有效選項（1 或 2）！");
+        }        
+    </script>
+</body>
+</html>
