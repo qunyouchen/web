@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成績單</title>
+</head>
+<body>
+        <h2>一年丙班 成績</h2>
+    <script>
+        let grades= [
+            ['王小名',85,45,92],
+            ['李張三',100,20,62],
+            ['咚咚',75,81,65],
+            ['如花',55,30,89],
+            ['賴小恩',65,14,70],
+        ];
+        document.write('<table border="1"cellspacing="0" cellpadding="5">');
+        document.write('<tr><th>姓名</th><th>國文</th><th>數學</th><th>英文</th><th>總分</th><th>平均</th></tr>');
+        for(let i=0;i<grades.length;i++){
+            let student = grades[i];
+        let sum = student[1] + student[2] + student[3];
+        let avg = (sum / 3).toFixed(2);
+
+        document.write('<tr>');
+        document.write('<td>' + student[0] + '</td>'); 
+        document.write('<td>' + student[1] + '</td>'); 
+        document.write('<td>' + student[2] + '</td>'); 
+        document.write('<td>' + student[3] + '</td>'); 
+        document.write('<td>' + sum + '</td>');        
+        if (avg < 60) {
+            document.write('<td style="color:red;">' + avg + '</td>');
+        } else {
+            document.write('<td>' + avg + '</td>');
+        }        
+
+        document.write('</tr>');
+    }
+    </script>
+</body>
+</html>
