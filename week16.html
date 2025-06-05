@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="a">購物車總額</button>
+    <button id="b">清空購物車</button></br>
+
+    <img src="https://i3.momoshop.com.tw/1713430597/goodsimg/0003/831/090/3831090_R1_m.webp">
+    <p>$134</p>
+    <button id="c">加入購物車</button><br>
+    <img src="https://no3.com.tw/images/202006/goods_img/2382_P_1592171133889.jpg">
+    <p>$66</p>
+    <button id="d">加入購物車</button>
+
+    <script>
+        let sum=parseInt(localStorage.getItem("price"));
+        const prices=[134,66];
+        const buttonA = document.querySelector("#a");
+        const buttonB = document.querySelector("#b");
+        function updateCartTotal() {
+            localStorage.setItem("price", sum);
+        }
+        document.querySelector("#c").addEventListener("click", function () {
+            sum += prices[0];
+            updateCartTotal();
+            alert("已加入商品：$" + prices[0]);
+        });
+        document.querySelector("#d").addEventListener("click", function () {
+            sum += prices[0];
+            updateCartTotal();
+            alert("已加入商品：$" + prices[1]);
+        });
+        document.querySelector("#a").addEventListener("click", function () {
+            localStorage.setItem("price", sum);
+            buttonA.innerHTML = "總額：$" + sum;
+            alert("購物車總額為：$" + sum);
+        });
+        document.querySelector("#b").addEventListener("click", function () {
+            sum = 0;
+            buttonB.innerHTML = "已清空！";
+            setTimeout(() => {
+            buttonB.innerHTML = "清空購物車";
+            }, 2000);
+            updateCartTotal();
+            alert("購物車已清空！");
+        });
+    </script>
+</body>
+</html>
