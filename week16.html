@@ -18,12 +18,14 @@
 
     <script>
         let sum=parseInt(localStorage.getItem("price")) || 0;;
+        console.log("當前總額是：" + sum);
         const price=[134,66];
         const buttonA = document.querySelector("#a");
         const buttonB = document.querySelector("#b");
         function updateCartTotal() {
             localStorage.setItem("price", sum);
-            console.log("更新成功，總額為：" + sum);
+            console.log("總額為：" + sum);                           
+            console.log("目前金額" + localStorage.getItem("price")); 
         }
         document.querySelector("#c").addEventListener("click", function () {
             sum += price[0];
