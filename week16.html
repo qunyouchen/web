@@ -17,24 +17,28 @@
     <button id="d">加入購物車</button>
 
     <script>
-        let sum=parseInt(localStorage.getItem("price"));
-        const prices=[134,66];
+        let sum=parseInt(localStorage.getItem("price")) || 0;;
+        const price=[134,66];
         const buttonA = document.querySelector("#a");
         const buttonB = document.querySelector("#b");
         function updateCartTotal() {
             localStorage.setItem("price", sum);
+            console.log("更新成功，總額為：" + sum);
         }
         document.querySelector("#c").addEventListener("click", function () {
-            sum += prices[0];
+            sum += price[0];
             updateCartTotal();
         });
         document.querySelector("#d").addEventListener("click", function () {
-            sum += prices[0];
+            sum += price[1];
             updateCartTotal();
         });
         document.querySelector("#a").addEventListener("click", function () {
             localStorage.setItem("price", sum);
-            buttonA.innerHTML = "總額：$" + sum;
+                buttonA.innerHTML = "總額：$" + sum
+                setTimeout(() => {
+                    buttonA.innerHTML = "購物車總額";
+                }, 3000);
         });
         document.querySelector("#b").addEventListener("click", function () {
             sum = 0;
@@ -45,5 +49,6 @@
             updateCartTotal();
         });
     </script>
+        
 </body>
 </html>
